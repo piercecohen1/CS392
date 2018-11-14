@@ -31,15 +31,6 @@ int main(int argc, char **argv)
 	for(int i=0; i<(N*N); i++)
 		matrix[i] = (((float)rand())/RAND_MAX)*200; // Range: [0-200]
 
-	/* Print starting matrix */
-	// for(int i=0; i<N; i++){
-	// 	for(int j=0; j<N; j++){
-	// 		printf("%f\t", matrix[i*N+j]);
-	// 	}
-	// 	printf("\n");
-	// }
-	// printf("\n");
-
 	gettimeofday(&tv_start, NULL); // Record start time
 
 	/* Perform transposition */
@@ -62,16 +53,6 @@ int main(int argc, char **argv)
 	/* Print elapsed time */
 	printf("TRANSFORMATION COMPLETE\n");
 	printf("Elapsed time (milliseconds): %.3f\n\n", elapsed);
-
-	/* Print resulting matrix */
-	// printf("POST-TRANSPOSITION:\n");
-
-	// for(int i=0; i<N; i++){
-	// 	for(int j=0; j<N; j++){
-	// 		printf("%f\t", tmatrix[i*N+j]);
-	// 	}
-	// 	printf("\n");
-	// }
 
 	/* Verify resulting matrix */
 	int correct_transposed = 1;
