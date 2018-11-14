@@ -51,21 +51,8 @@ int main(int argc, char **argv)
 	elapsed += (tv_end.tv_usec - tv_start.tv_usec) / 1000.0;
 
 	/* Print elapsed time */
-	printf("TRANSFORMATION COMPLETE\n");
+	printf("\nTRANSFORMATION COMPLETE\n");
 	printf("Elapsed time (milliseconds): %.3f\n\n", elapsed);
-
-	/* Verify resulting matrix */
-	int correct_transposed = 1;
-	for(int i=0; i<N; i++){
-		for(int j=0; j<N; j++){
-			if(tmatrix[j+i*N] != matrix[i+j*N])
-				correct_transposed = 0;
-		}
-	}
-	if(!correct_transposed)
-		printf("\nNOT CORRECTLY TRANSPOSED!\n");
-	else
-		printf("\nCORRECTLY TRANSPOSED\n");
 
 	/* Deallocate allocated memory */
 	free(matrix);
