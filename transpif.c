@@ -60,7 +60,7 @@ int main(int argc, char **argv)
 	elapsed += (tv_end.tv_usec - tv_start.tv_usec) / 1000.0;
 
 	/* Print elapsed time */
-	printf("TRANSFORMATION COMPLETE\n");
+	printf("\nTRANSFORMATION COMPLETE\n");
 	printf("Elapsed time (milliseconds): %.3f\n\n", elapsed);
 
 	/* Deallocate allocated memory */
